@@ -1,15 +1,32 @@
-function formatMessage(message, maxLength) {
-    let result;
-    // Change code below this line
-  if (message.length <= maxLenght) {
-    result = message;
+function checkForSpam(message) {
+  let result;
+  message = message.toLowerCase()
+  if (message.includes("spam")) {
+    result = true;
+  } else if (message.includes("sale")) {
+    result = true;
   } else {
-    result = message.slice(0, message.length);
+    result = false;
   }
-    /// Change code above this line
-    return result;
-  }
+
+return result;
+}
+
+
+  console.log(checkForSpam("[SPAM] How to earn fast money?"));
+
+
   
-  
-  
-  console.log(formatMessage("Curabitur ligula sapien", 23));
+
+
+//   function checkForSpam(message) {
+//     let result;
+//   if (message.includes("spam")) {
+//     result = true;
+    
+//   } else if (message.includes("sale")) {
+//     result = true;
+//   } else {
+//     result = false;
+//   }
+// }
